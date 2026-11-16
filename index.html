@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Bellavista | Criadero Dorper</title>
+<meta name="description" content="Bellavista, criadero de ovinos Dorper en Santander, Colombia. Conoce nuestros animales, genética y manejo.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Italiana&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+<!-- ENCABEZADO -->
+<header class="header">
+    <a href="#inicio" class="logo">
+    <img src="assets/logo.png" alt="Bellavista Criadero Dorper">
+    </a>
+
+    <div class="header-actions">
+    <a href="#animales" class="btn btn-gold">
+        Ver animales →
+      </a>
+      <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="navMenu">
+        ☰
+      </button>
+    </div>
+
+    <nav class="nav-menu" id="navMenu">
+      <a href="#inicio">Inicio</a>
+      <a href="#animales">Animales</a>
+      <a href="#genetica">Genética</a>
+      <a href="#manejo">Cría y manejo</a>
+      <a href="#criadero">Nuestro criadero</a>
+      <a href="#novedades">Novedades</a>
+      <a href="#contacto">Contacto</a>
+      <a href="#extras">Extras</a>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- PORTADA PRINCIPAL -->
+    <section class="hero" id="inicio">
+      <div class="hero-overlay"></div>
+
+      <div class="hero-content">
+        <img src="assets/logo.png" alt="Bellavista" class="hero-logo">
+
+        <h1>Bellavista<br>Criadero Dorper</h1>
+
+        <p>
+          Cría y selección de ovinos en Santander, Colombia.
+        </p>
+
+        <div class="hero-buttons">
+          <a href="#animales" class="btn btn-gold">
+            Conoce nuestros animales →
+          </a>
+          <a href="#criadero" class="btn btn-outline">
+            Descubre Bellavista
+          </a>
+        </div>
+
+        <span class="hero-location">
+          SANTANDER, COLOMBIA
+        </span>
+      </div>
+    </section>
+
+    <!-- PRESENTACIÓN -->
+    <section class="section intro">
+      <div class="container">
+        <span class="eyebrow">BIENVENIDOS A BELLAVISTA</span>
+
+        <h2>Una visión de la cría ovina</h2>
+
+        <p>
+          Bellavista es un proyecto ganadero dedicado a la
+          cría, selección y desarrollo de ovinos, con especial
+          interés en la raza Dorper.
+        </p>
+
+        <a href="#criadero" class="text-link">
+          Conoce nuestro proyecto →
+        </a>
+      </div>
+    </section>
+
+    <!-- CATEGORÍAS -->
+    <section class="section categories" id="categorias">
+      <div class="container">
+        <span class="eyebrow">NUESTROS ANIMALES</span>
+
+        <h2>Razas y líneas de cría</h2>
+
+        <p class="section-description">
+          Conoce las razas que forman parte de nuestro proyecto
+          ganadero y sus características.
+        </p>
+
+        <div class="category-grid">
+          <article class="category-card">
+            <img src="assets/dorper.jpg" alt="Ovino Dorper">
+            <div class="category-content">
+              <h3>Dorper</h3>
+              <p>Conoce nuestros ejemplares.</p>
+              <a href="#animales">Explorar animales →</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CATÁLOGO -->
+    <section class="section animals" id="animales">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <span class="eyebrow">NUESTRO CATÁLOGO</span>
+            <h2>Conoce nuestros ejemplares</h2>
+          </div>
+        </div>
+
+        <p class="section-description">
+          Información individual de los animales del criadero,
+          sus características y disponibilidad.
+        </p>
+
+        <div class="animal-filters">
+          <button class="filter-btn active" data-filter="todos">
+            Todos
+          </button>
+          <button class="filter-btn" data-filter="macho">
+            Machos
+          </button>
+          <button class="filter-btn" data-filter="hembra">
+            Hembras
+          </button>
+        </div>
+
+        <div class="animal-grid" id="animalGrid">
+          <!-- Los animales se agregarán aquí -->
+        </div>
+
+        <p class="catalog-note">
+          Precios por consultar directamente con Bellavista.
+        </p>
+      </div>
+    </section>
+
+    <!-- GENÉTICA -->
+    <section class="section genetics" id="genetica">
+      <div class="container">
+        <span class="eyebrow">GENÉTICA</span>
+
+        <h2>Selección y desarrollo genético</h2>
+
+        <p class="section-description">
+          La selección de nuestros animales contempla
+          características productivas, reproductivas
+          y de adaptación.
+        </p>
+
+        <div class="genetics-grid">
+          <article class="genetics-item">
+            <h3>Criterios de selección</h3>
+            <p>
+              Estructura corporal, crecimiento,
+              características reproductivas y adaptación.
+            </p>
+          </article>
+
+          <article class="genetics-item">
+            <h3>Registros individuales</h3>
+            <p>
+              Identificación, fechas de nacimiento,
+              genealogía disponible y evolución de peso.
+            </p>
+          </article>
+
+          <article class="genetics-item">
+            <h3>Desarrollo del rebaño</h3>
+            <p>
+              Seguimiento de los animales y evaluación
+              de sus características.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CRÍA Y MANEJO -->
+    <section class="section breeding" id="manejo">
+      <div class="container">
+        <span class="eyebrow">CRÍA Y MANEJO</span>
+
+        <h2>El cuidado de nuestros animales</h2>
+
+        <div class="management-grid">
+          <article>
+            <h3>Alimentación</h3>
+            <p>
+              Manejo nutricional según las necesidades
+              y etapas de desarrollo de los animales.
+            </p>
+          </article>
+
+          <article>
+            <h3>Instalaciones</h3>
+            <p>
+              Espacios destinados al alojamiento,
+              manejo y bienestar del rebaño.
+            </p>
+        </article>
+
+        <article>
+            <h3>Madres y crías</h3>
+            <p>
+            Seguimiento de la reproducción,
+            gestación, nacimiento y lactancia.
+            </p>
+        </article>
+
+        <article>
+            <h3>Crecimiento</h3>
+            <p>
+        Observación del desarrollo de los
+        ejemplares durante sus diferentes etapas.
+            </p>
+        </article>
+        </div>
+    </div>
+    </section>
+
+    <!-- NUESTRO CRIADERO -->
+    <section class="section ranch" id="criadero">
+    <div class="container">
+        <span class="eyebrow">NUESTRO CRIADERO</span>
+
+        <h2>Conoce Bellavista</h2>
+
+        <p>
+        Bellavista nace como un proyecto dedicado
+        a la cría ovina, con una visión de crecimiento,
+        aprendizaje y desarrollo ganadero.
+        </p>
+
+        <div class="ranch-gallery">
+        <img src="assets/criadero.jpg" alt="Instalaciones de Bellavista">
+        </div>
+    </div>
+    </section>
+
+    <!-- NOVEDADES -->
+    <section class="section news" id="novedades">
+    <div class="container">
+        <span class="eyebrow">BELLAVISTA</span>
+
+        <h2>Artículos y novedades</h2>
+
+        <p class="section-description">
+        Un espacio para compartir nacimientos,
+        nuevos ejemplares, avances del criadero
+        y experiencias de manejo.
+        </p>
+
+        <div class="news-grid" id="newsGrid">
+        <!-- Aquí aparecerán las publicaciones -->
+        </div>
+    </div>
+    </section>
+
+    <section id="extras" class="bellavista-extras" aria-labelledby="extras-titulo">
+  <div class="bellavista-extras__interior">
+    <h2 id="extras-titulo">Extras</h2>
+
+    <article class="bellavista-extras__producto">
+      <div class="bellavista-extras__foto">
+        <span>Foto del empaque<br>Próximamente</span>
+      </div>
+
+      <div class="bellavista-extras__detalle">
+        <p class="bellavista-extras__etiqueta">100 % natural</p>
+        <h3>Abono orgánico ovino</h3>
+        <p>
+          Elaborado con estiércol compostado de nuestros ovinos Dorper.
+          Aporta materia orgánica al suelo de jardines, huertas y macetas.
+        </p>
+        <a class="bellavista-extras__boton" href="#contacto">
+          Consultar disponibilidad
+        </a>
+      </div>
+    </article>
+  </div>
+</section>
+    <!-- CONTACTO -->
+    <section class="section contact" id="contacto">
+<div class="container">
+        <span class="eyebrow">CONTACTO</span>
+
+        <h2>Conversemos sobre nuestros animales</h2>
+
+        <p>
+        Si deseas conocer nuestros ejemplares,
+        su disponibilidad o recibir información
+        del criadero, puedes comunicarte con nosotros.
+        </p>
+
+        <div class="contact-buttons">
+        <a href="#" class="btn btn-gold" id="whatsappLink">
+            Consultar por WhatsApp →
+        </a>
+        </div>
+
+        <div class="contact-location">
+        <h3>Ubicación</h3>
+        <p>La Mesa De Los Santos, Santander</p>
+        </div>
+    </div>
+    </section>
+
+</main>
+
+<!-- PIE DE PÁGINA -->
+<footer class="footer">
+  <div class="container">
+    <img src="assets/logo.png" alt="Bellavista" class="footer-logo">
+
+    <h2>Bellavista – Criadero Dorper</h2>
+    <p>Santander, Colombia</p>
+
+    <div class="footer-links">
+        <a href="#inicio">Inicio</a>
+        <a href="#animales">Animales</a>
+        <a href="#genetica">Genética</a>
+        <a href="#manejo">Cría y manejo</a>
+        <a href="#criadero">Criadero</a>
+        <a href="#novedades">Novedades</a>
+        <a href="#contacto">Contacto</a>
+    </div>
+
+    <p class="copyright">
+        © 2026 Bellavista Criadero Dorper.
+        Todos los derechos reservados.
+    </p>
+    </div>
+</footer>
+
+
+<script src="script.js"></script>
+</body>
+</html>
+

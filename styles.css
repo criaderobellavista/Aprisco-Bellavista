@@ -1,0 +1,1096 @@
+/* ==========================================
+   BELLAVISTA - CRIADERO DORPER
+   DISEÑO PREMIUM, ELEGANTE Y MINIMALISTA
+========================================== */
+
+/* COLORES Y VARIABLES */
+
+:root {
+  --marfil: #f7f5ef;
+  --blanco: #ffffff;
+  --negro: #1c1c1a;
+  --verde: #354437;
+  --dorado: #c99c60;
+  --dorado-oscuro: #967949;
+  --gris: #77766f;
+  --borde: #e7e3d9;
+
+  --fuente-titulos: "Italiana", Georgia, serif;
+  --fuente-textos: "DM Sans", Arial, sans-serif;
+
+  --ancho-maximo: 1200px;
+}
+
+/* CONFIGURACIÓN GENERAL */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 90px;
+}
+
+body {
+  font-family: var(--fuente-textos);
+  color: var(--negro);
+  background-color: var(--marfil);
+  line-height: 1.7;
+  overflow-x: hidden;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font: inherit;
+  cursor: pointer;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+.container {
+  width: min(90%, var(--ancho-maximo));
+  margin: 0 auto;
+}
+
+.section {
+  padding: 110px 0;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--fuente-titulos);
+  font-weight: 400;
+  line-height: 1.15;
+}
+
+h2 {
+  font-size: clamp(38px, 5vw, 66px);
+  margin: 15px 0 25px;
+}
+
+h3 {
+  font-size: 30px;
+}
+
+p {
+  color: var(--gris);
+}
+
+.eyebrow {
+  display: inline-block;
+  color: var(--dorado-oscuro);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+.section-description {
+  max-width: 680px;
+  margin-bottom: 40px;
+}
+
+.text-link {
+  display: inline-block;
+  color: var(--dorado-oscuro);
+  font-weight: 600;
+  margin-top: 25px;
+}
+
+.text-link:hover {
+  color: var(--verde);
+}
+
+/* ==========================================
+   ENCABEZADO
+========================================== */
+
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 22px 6%;
+  background: rgba(20, 25, 20, 0.18);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.logo img {
+  width: 100px;
+  max-height: 85px;
+  object-fit: contain;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.menu-toggle {
+  background: rgba(255, 255, 255, 0.13);
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  font-size: 22px;
+}
+
+.menu-toggle:hover {
+  background: rgba(255, 255, 255, 0.25);
+}
+
+.nav-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  right: 5%;
+  width: 280px;
+  padding: 25px;
+  background: rgba(30, 38, 30, 0.96);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 8px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+}
+
+.nav-menu.active {
+  display: flex;
+  flex-direction: column;
+  gap: 17px;
+}
+
+.nav-menu a {
+  color: white;
+  font-size: 14px;
+  transition: color 0.3s;
+}
+
+.nav-menu a:hover {
+  color: var(--dorado);
+}
+
+/* ==========================================
+   BOTONES
+========================================== */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 15px 28px;
+  border-radius: 3px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+}
+
+.btn-gold {
+  color: var(--negro);
+  background: var(--dorado);
+  border: 1px solid var(--dorado);
+}
+
+.btn-gold:hover {
+  background: var(--dorado-oscuro);
+  color: white;
+  transform: translateY(-2px);
+}
+
+.btn-outline {
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.75);
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+.btn-outline:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* ==========================================
+   PORTADA PRINCIPAL
+========================================== */
+
+.hero {
+  position: relative;
+  min-height: 100vh;
+  min-height: 100svh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
+
+  background-image: url("assets/portada.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: #374436;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.35) 0%,
+    rgba(0, 0, 0, 0.28) 45%,
+    rgba(0, 0, 0, 0.62) 100%
+  );
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 950px;
+  padding: 160px 24px 100px;
+  color: white;
+  animation: aparecer 1.2s ease both;
+}
+
+.hero-logo {
+  width: 120px;
+  max-height: 120px;
+  object-fit: contain;
+  margin: 0 auto 25px;
+  filter: drop-shadow(0 4px 15px rgba(0, 0, 0, 0.3));
+}
+
+.hero h1 {
+  color: white;
+  font-size: clamp(60px, 9vw, 125px);
+  line-height: 0.98;
+  letter-spacing: -2px;
+  margin-bottom: 28px;
+  text-shadow: 0 5px 30px rgba(0, 0, 0, 0.2);
+}
+
+.hero p {
+  color: rgba(255, 255, 255, 0.92);
+  font-size: clamp(15px, 2vw, 20px);
+  font-weight: 400;
+  letter-spacing: 1px;
+}
+
+.hero-buttons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 40px;
+}
+
+.hero-location {
+  display: block;
+  margin-top: 65px;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 4px;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+@keyframes aparecer {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ==========================================
+   PRESENTACIÓN
+========================================== */
+
+.intro {
+  text-align: center;
+  background: var(--marfil);
+}
+
+.intro .container {
+  max-width: 850px;
+}
+
+.intro h2 {
+  color: var(--verde);
+}
+
+.intro p {
+  font-size: 18px;
+  line-height: 1.9;
+}
+
+/* ==========================================
+   CATEGORÍAS
+========================================== */
+
+.categories {
+  background: #f0ece1;
+}
+
+.category-grid {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(280px, 1fr)
+  );
+  gap: 28px;
+}
+
+.category-card {
+  position: relative;
+  min-height: 460px;
+  overflow: hidden;
+  background: #dedbd1;
+  border-radius: 4px;
+}
+
+.category-card img {
+  width: 100%;
+  height: 460px;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.category-card:hover img {
+  transform: scale(1.06);
+}
+
+.category-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    transparent 35%,
+    rgba(0, 0, 0, 0.78) 100%
+  );
+}
+
+.category-content {
+  position: absolute;
+  z-index: 2;
+  bottom: 35px;
+  left: 35px;
+  right: 35px;
+  color: white;
+}
+
+.category-content h3 {
+  font-size: 44px;
+  color: white;
+}
+
+.category-content p {
+  color: rgba(255, 255, 255, 0.85);
+  margin: 10px 0;
+}
+
+.category-content a {
+  display: inline-block;
+  margin-top: 15px;
+  color: #e3c48b;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+/* ==========================================
+   CATÁLOGO DE ANIMALES
+========================================== */
+
+.animals {
+  background: white;
+}
+
+.section-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  gap: 20px;
+}
+
+.animal-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 35px;
+}
+
+.filter-btn {
+  border: 1px solid var(--borde);
+  padding: 11px 22px;
+  background: transparent;
+  color: var(--gris);
+  border-radius: 3px;
+  font-size: 13px;
+  transition: all 0.3s;
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+  background: var(--verde);
+  color: white;
+  border-color: var(--verde);
+}
+
+.animal-grid {
+  display: grid;
+  grid-template-columns: repeat(
+    3,
+    minmax(0, 1fr)
+  );
+  gap: 28px;
+}
+
+.animal-card {
+  background: var(--marfil);
+  border: 1px solid var(--borde);
+  overflow: hidden;
+  border-radius: 4px;
+  transition:
+    transform 0.3s,
+    box-shadow 0.3s;
+}
+
+.animal-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.08);
+}
+
+.animal-card img {
+  width: 100%;
+  height: 290px;
+  object-fit: cover;
+}
+
+.animal-card-content {
+  padding: 25px;
+}
+
+.animal-card h3 {
+  font-size: 29px;
+  margin-bottom: 10px;
+}
+
+.animal-card p {
+  font-size: 13px;
+  margin-bottom: 8px;
+}
+
+.animal-card a {
+  display: inline-block;
+  margin-top: 18px;
+  color: var(--dorado-oscuro);
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.catalog-note {
+  text-align: center;
+  margin-top: 35px;
+  font-size: 13px;
+}
+
+/* ==========================================
+   GENÉTICA
+========================================== */
+
+.genetics {
+  background: var(--marfil);
+}
+
+.genetics-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  margin-top: 45px;
+}
+
+.genetics-item {
+  background: white;
+  padding: 42px 32px;
+  border: 1px solid var(--borde);
+  border-radius: 3px;
+  transition: transform 0.3s;
+}
+
+.genetics-item:hover {
+  transform: translateY(-5px);
+}
+
+.genetics-item h3 {
+  color: var(--verde);
+  margin-bottom: 18px;
+}
+
+.genetics-item p {
+  font-size: 14px;
+}
+
+/* ==========================================
+   CRÍA Y MANEJO
+========================================== */
+
+.breeding {
+  background: white;
+}
+
+.management-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 25px;
+  margin-top: 45px;
+}
+
+.management-grid article {
+  padding: 42px;
+  background: var(--marfil);
+  border-left: 3px solid var(--dorado);
+}
+
+.management-grid h3 {
+  color: var(--verde);
+  margin-bottom: 15px;
+}
+
+.management-grid p {
+  font-size: 14px;
+}
+
+/* ==========================================
+   NUESTRO CRIADERO
+========================================== */
+
+.ranch {
+  background: var(--marfil);
+}
+
+.ranch p {
+  max-width: 680px;
+  margin-bottom: 35px;
+}
+
+.ranch-gallery {
+  margin-top: 45px;
+  overflow: hidden;
+  border-radius: 4px;
+}
+
+.ranch-gallery img {
+  width: 100%;
+  max-height: 600px;
+  object-fit: cover;
+}
+
+/* ==========================================
+   ARTÍCULOS Y NOVEDADES
+========================================== */
+
+.news {
+  background: white;
+}
+
+.news-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+.news-card {
+  background: var(--marfil);
+  border: 1px solid var(--borde);
+  overflow: hidden;
+}
+
+.news-card img {
+  width: 100%;
+  height: 230px;
+  object-fit: cover;
+}
+
+.news-card-content {
+  padding: 25px;
+}
+
+.news-card h3 {
+  font-size: 27px;
+  margin-bottom: 12px;
+}
+
+.news-card p {
+  font-size: 14px;
+}
+
+/* ==========================================
+   CONTACTO
+========================================== */
+
+.contact {
+  background: var(--verde);
+  color: white;
+  text-align: center;
+}
+
+.contact h2 {
+  color: white;
+}
+
+.contact p {
+  color: rgba(255, 255, 255, 0.8);
+  max-width: 680px;
+  margin: 0 auto 30px;
+}
+
+.contact .eyebrow {
+  color: #d8bc83;
+}
+
+.contact-buttons {
+  margin-top: 35px;
+}
+
+.contact-location {
+  margin-top: 55px;
+}
+
+.contact-location h3 {
+  font-size: 25px;
+  color: white;
+}
+
+.contact-location p {
+  margin-top: 10px;
+}
+
+/* ==========================================
+   PIE DE PÁGINA
+========================================== */
+
+.footer {
+  background: #171a17;
+  color: white;
+  text-align: center;
+  padding: 75px 0 30px;
+}
+
+.footer-logo {
+  width: 150px;
+  margin: 0 auto 25px;
+  border-radius: 10px;
+}
+
+.footer h2 {
+  font-size: 35px;
+  color: white;
+}
+
+.footer p {
+  color: rgba(255, 255, 255, 0.55);
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 25px;
+  margin: 40px 0;
+}
+
+.footer-links a {
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 13px;
+}
+
+.footer-links a:hover {
+  color: var(--dorado);
+}
+
+.copyright {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 25px;
+  font-size: 12px;
+}
+
+/* ==========================================
+   ANIMACIONES
+========================================== */
+
+.reveal {
+  opacity: 0;
+  transform: translateY(25px);
+  transition:
+    opacity 0.7s ease,
+    transform 0.7s ease;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ==========================================
+   TABLETS
+========================================== */
+
+@media (max-width: 1000px) {
+
+  .animal-grid,
+  .genetics-grid,
+  .news-grid {
+grid-template-columns: repeat(2, 1fr);
+  }
+
+  .section {
+    padding: 85px 0;
+  }
+}
+
+/* DISEÑO PARA CELULARES */
+
+@media (max-width: 650px) {
+
+  .header {
+    padding: 15px 5%;
+  }
+
+  .logo img {
+    width: 70px;
+  }
+
+  .header-actions .btn {
+    display: none;
+  }
+
+  .hero-content {
+    padding: 130px 20px 70px;
+  }
+
+  .hero h1 {
+    font-size: clamp(48px, 12vw, 75px);
+    letter-spacing: -1px;
+  }
+
+  .hero-logo {
+    width: 90px;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero-buttons .btn {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .section {
+    padding: 65px 0;
+  }
+
+  h2 {
+    font-size: 40px;
+  }
+
+  .animal-grid,
+  .genetics-grid,
+  .news-grid,
+  .management-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .category-card,
+  .category-card img {
+    height: 380px;
+    min-height: 380px;
+  }
+
+  .management-grid article {
+    padding: 30px;
+  }
+
+  .footer-links {
+    gap: 15px;
+  }
+
+  .nav-menu {
+    right: 5%;
+    width: 90%;
+  }
+}
+
+/* ACCESIBILIDAD DE ANIMACIONES */
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
+/* BARRA SUPERIOR FIJA */
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 1000;
+  background: rgba(247, 245, 239, 0.94);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid #e7e3d9;
+  padding: 12px 5%;
+}
+
+.header .logo img {
+  width: 90px;
+  max-height: 75px;
+}
+
+.header .menu-toggle {
+  color: #1c1c1a;
+  border: 1px solid #d6d0c5;
+  background: transparent;
+  border-radius: 3px;
+}
+
+.header .menu-toggle:hover {
+  background: #eae5da;
+}
+
+.header .nav-menu {
+  background: rgba(247, 245, 239, 0.98);
+  border: 1px solid #e7e3d9;
+}
+
+.header .nav-menu a {
+  color: #1c1c1a;
+}
+
+.header .nav-menu a:hover {
+  color: #967949;
+}
+
+@media (min-width: 1100px) {
+  .header {
+    justify-content: flex-start;
+    gap: 25px;
+  }
+
+  .header .nav-menu {
+    position: static;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 18px;
+    width: auto;
+    padding: 0;
+    margin-left: auto;
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    backdrop-filter: none;
+  }
+
+  .header .nav-menu a {
+    font-size: 12px;
+    white-space: nowrap;
+  }
+
+  .header .header-actions {
+    order: 3;
+  }
+
+  .header .menu-toggle {
+    display: none;
+  }
+}
+/* PORTADA BELLAVISTA - ESTILO LOVABLE */
+
+.hero {
+  justify-content: flex-start;
+  align-items: flex-end;
+  text-align: left;
+  background-position: center center;
+}
+
+.hero-content {
+  width: 100%;
+  max-width: 1250px;
+  margin: 0 auto;
+  padding: 170px 6% 90px;
+  text-align: left;
+}
+
+.hero-logo {
+  margin: 0 0 30px;
+}
+
+.hero h1 {
+  font-size: clamp(60px, 8vw, 110px);
+  line-height: 1.02;
+}
+
+.hero p {
+  max-width: 650px;
+}
+
+.hero-buttons {
+  justify-content: flex-start;
+}
+
+.hero-location {
+  text-align: left;
+}
+
+@media (max-width: 650px) {
+  .hero-content {
+    padding: 150px 6% 65px;
+  }
+
+  .hero h1 {
+    font-size: clamp(48px, 12vw, 70px);
+  }
+}
+
+/* Sección Extras de Bellavista */
+#extras.bellavista-extras {
+  padding: clamp(56px, 7vw, 96px) clamp(20px, 7vw, 96px);
+  background: #f4f1e7;
+  color: #20251f;
+  scroll-margin-top: 105px;
+}
+
+.bellavista-extras__interior {
+  max-width: 1120px;
+  margin: 0 auto;
+}
+
+#extras h2 {
+  margin: 0 0 clamp(24px, 4vw, 42px);
+  font-size: clamp(2.75rem, 5vw, 4.5rem);
+}
+
+.bellavista-extras__producto {
+  display: grid;
+  grid-template-columns: minmax(0, 360px) minmax(0, 1fr);
+  align-items: center;
+  gap: clamp(24px, 5vw, 64px);
+  padding: clamp(20px, 4vw, 48px);
+  background: #fcfaf4;
+  border: 1px solid #ded7c7;
+}
+
+.bellavista-extras__foto {
+  display: grid;
+  place-items: center;
+  width: 100%;
+  aspect-ratio: 1;
+  overflow: hidden;
+  border: 1px dashed #aaa18e;
+  background: #eee9dd;
+  color: #625b4d;
+  text-align: center;
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+.bellavista-extras__foto img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+#extras .bellavista-extras__etiqueta {
+  margin: 0 0 10px;
+  color: #4f6248;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+#extras h3 {
+  margin: 0 0 14px;
+  font-size: clamp(1.85rem, 3.5vw, 3rem);
+}
+
+#extras .bellavista-extras__detalle > p:not(.bellavista-extras__etiqueta) {
+  max-width: 42ch;
+  margin: 0 0 24px;
+  line-height: 1.65;
+}
+
+#extras .bellavista-extras__boton {
+  display: inline-block;
+  padding: 12px 18px;
+  background: #c99b60;
+  color: #20251f;
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+#extras .bellavista-extras__boton:hover {
+  background: #ddb786;
+}
+
+@media (max-width: 700px) {
+  .bellavista-extras__producto {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .bellavista-extras__foto {
+    max-width: 360px;
+    justify-self: center;
+  }
+}
+.header .logo img {
+  border-radius: 16px;
+}
+.hero-logo {
+  border-radius: 18px;
+}
+
+#animales :has(> img[src="assets/dorper.jpg"]) {
+  height: auto;
+  min-height: 0;
+  max-height: none;
+  aspect-ratio: auto;
+}
+
+img[src="assets/dorper.jpg"] {
+  object-fit: contain;
+}
